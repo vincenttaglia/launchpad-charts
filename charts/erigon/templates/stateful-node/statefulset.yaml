@@ -72,6 +72,9 @@ spec:
         - name: env-nodeport
           emptyDir: {}
       {{- end }}
+      {{- with $values.extraVolumes }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       initContainers:
         - name: set-permissions
           image: docker.io/busybox:1.37.0

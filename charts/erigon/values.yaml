@@ -294,6 +294,8 @@ statefulNode:
   extraInitContainers: []
   # -- Additional containers to inject to this graph node group - an array of Container objects
   extraContainers: []
+  # -- Additional volume to inject to this graph node group - an array of volume objects
+  extraVolumes: []
 
 rpcdaemon:
   # -- Enable a Deployment of rpcdaemon that can be scaled independently
